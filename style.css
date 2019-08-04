@@ -7,7 +7,7 @@
 
 body {
   overscroll-behavior: none;
-  padding-top: 152px 0 75px 0;
+  padding: 152px 0 75px 0;
   margin: 0;
   -webkit-user-select: none;
   -webkit-tap-highlight-color: transparent;
