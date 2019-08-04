@@ -20,7 +20,17 @@ self.addEventListener('install', function(e) {
        '/imgs/apple-icon-144x144.png',
        '/imgs/apple-icon-152x152.png',
        '/imgs/apple-icon-180x180.png',
-       '/imgs/android-icon-192x192.png'
+       '/imgs/android-icon-192x192.png',
+       '/imgs/iphone5_splash.png',
+       '/imgs/iphone6_splash.png',
+       '/imgs/iphoneplus_splash.png',
+       '/imgs/iphonex_splash.png',
+       '/imgs/iphonexr_splash.png',
+       '/imgs/iphonexsmax_splash.png',
+       '/imgs/ipad_splash.png',
+       '/imgs/ipadpro1_splash.png',
+       '/imgs/ipadpro3_splash.png',
+       '/imgs/ipadpro2_splash.png',
      ]);
    })
  );
