@@ -142,7 +142,7 @@ var app = new Vue({
         year++;
       }
 
-      console.log(year, month, day, hour, minute);
+//       console.log(year, month, day, hour, minute);
       if (year == 2019 && month == 8 && day < 29) {
         for (i = 0; i < Object.keys(_this.buses).length; i++) {
           if (day == Object.keys(_this.buses)[i]) {
