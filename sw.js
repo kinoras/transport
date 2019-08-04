@@ -20,7 +20,7 @@ self.addEventListener('install', function(e) {
        '/img/apple-icon-144x144.png',
        '/img/apple-icon-152x152.png',
        '/img/apple-icon-180x180.png',
-       '/img/android-icon-192x192.png',
+       '/img/android-icon-192x192.png'
      ]);
    })
  );
