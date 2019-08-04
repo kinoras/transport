@@ -1,0 +1,296 @@
+@import url(//fonts.googleapis.com/earlyaccess/notosansjapanese.css);
+* {
+  box-sizing: border-box;
+  font-family: Avenir, Noto Sans Japanese;
+  -webkit-text-size-adjust: none;
+}
+
+body {
+  overscroll-behavior: none;
+  padding-top: 152px 0 75px 0;
+  margin: 0;
+  -webkit-user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+}
+body.has-popup {
+  overflow: hidden;
+}
+
+header, footer {
+  position: fixed;
+  left: 0;
+  right: 0;
+}
+
+header {
+  top: 0;
+  background: #D51067;
+  color: white;
+  display: flex;
+  height: 44px;
+  align-items: center;
+  justify-content: center;
+  z-index: 99;
+}
+header h1 {
+  margin: 0;
+  font-size: 20px;
+}
+header div.header-side {
+  flex: 1;
+  margin: 0 20px;
+  font-size: 17px;
+}
+header div.header-side a {
+  color: white;
+  text-decoration: none;
+}
+header div.header-side.left {
+  text-align: left;
+}
+header div.header-side.right {
+  text-align: right;
+}
+
+#popup {
+  z-index: 999;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+#popup.active {
+  display: flex;
+}
+#popup .content {
+  z-index: 999;
+  background: white;
+  width: 90%;
+  border-radius: 14px;
+  max-width: 500px;
+  padding: 16px 8px;
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.3);
+}
+#popup .content h3 {
+  text-align: center;
+  margin: 0;
+}
+#popup .content ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 16px 0 8px 0;
+}
+#popup .content ul li {
+  padding: 8px 0;
+  text-align: center;
+  flex: 1;
+  border-right: 1px solid #646464;
+}
+#popup .content ul li:last-child {
+  border-right: none;
+}
+#popup .content ul li span {
+  display: block;
+}
+#popup .content ul li span.title {
+  text-transform: uppercase;
+  font-size: .8em;
+}
+#popup .content ul li span.value {
+  font-size: 24px;
+}
+#popup .background {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.5);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+footer {
+  bottom: 0;
+  box-shadow: 0px -3px 8px rgba(0, 0, 0, 0.1);
+  z-index: 99;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 16px;
+}
+footer > div {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+footer > div:first-child {
+  margin-top: 0;
+}
+footer > div .left > span {
+  display: block;
+  line-height: 1.2em;
+}
+footer > div .left > span.up {
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: 500;
+}
+footer > div .left > span.down {
+  font-size: 13px;
+}
+footer > div .right .hr-num, footer > div .right .min-num {
+  font-size: 30px;
+}
+footer > div .right .hr-text, footer > div .right .min-text {
+  font-size: 20px;
+}
+
+main {
+  z-index: 1;
+}
+main nav {
+  text-align: center;
+  z-index: 5;
+  position: fixed;
+  top: 44px;
+  left: 0;
+  right: 0;
+  margin: 0;
+  overflow: auto;
+  white-space: nowrap;
+  padding: 8px 16px 3px 16px;
+  background: #f9f9f9;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+main nav::-webkit-scrollbar {
+  display: none !important;
+}
+main nav a {
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  padding: 4px 7px 5px 7px;
+  border-radius: 5px;
+  margin: 0 1px;
+  color: black;
+}
+main nav a.active {
+  color: white;
+  background: #D51067;
+}
+main nav a span {
+  display: block;
+}
+main nav a span.day {
+  font-size: 20px;
+  font-weight: 700;
+}
+main nav a span.month, main nav a span.year {
+  text-transform: uppercase;
+  font-size: 10px;
+  font-weight: 500;
+}
+main section {
+  display: none;
+  z-index: 3;
+}
+main section.active {
+  display: block;
+}
+main section ul.way-selector {
+  width: 100%;
+  position: fixed;
+  left: 0;
+  right: 0;
+  display: flex;
+  list-style: none;
+  padding: 8px 16px;
+  margin: 0 auto;
+  top: 106px;
+  background: #f9f9f9;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+main section ul.way-selector li {
+  color: #D51067;
+  flex: 1;
+  font-size: 13px;
+  padding: 5px;
+  border: 1px solid #D51067;
+  border-right: none;
+  text-align: center;
+}
+main section ul.way-selector li.active {
+  background: #D51067;
+  color: white;
+}
+main section ul.way-selector li:first-child {
+  border-radius: 5px 0 0 5px;
+}
+main section ul.way-selector li:last-child {
+  border-radius: 0 5px 5px 0;
+  border-right: 1px solid #D51067;
+}
+main section ul.way-list {
+  display: none;
+  list-style: none;
+  padding: 0 0;
+  margin: 0;
+}
+main section ul.way-list.active {
+  display: block;
+}
+main section ul.way-list li {
+  padding: 16px 20px;
+  border-bottom: .5px solid lightgrey;
+}
+main section ul.way-list li:last-child {
+  border-bottom: none;
+}
+main section ul.way-list li > div {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+main section ul.way-list li > div div {
+  flex: 2;
+  flex-shrink: 0;
+}
+main section ul.way-list li > div div.arrival {
+  text-align: right;
+}
+main section ul.way-list li > div div span {
+  display: block;
+}
+main section ul.way-list li > div div span.time {
+  font-size: 27px;
+  font-weight: 500;
+}
+main section ul.way-list li > div div span.place {
+  font-size: 13px;
+}
+main section ul.way-list li > div div.centre {
+  flex: 3;
+  flex-shrink: 1;
+  text-align: center;
+}
+main section ul.way-list li > div div.centre div.line {
+  height: 2px;
+  background: lightgrey;
+  border-radius: 50px;
+  margin: 3px 0;
+}
+main section ul.way-list li > div div.centre span {
+  font-size: 14px;
+}
