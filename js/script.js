@@ -104,7 +104,7 @@ var app = new Vue({
     // console.log(this.buses)
     var _this = this;
     function update_timer() {
-      let dater = new Date(),date,year,month,day,hour,minute,target_day,time_array,add_day,all_mins,left_hour,left_min,html = '';
+      let dater = new Date(),date,year,month,day,hour,minute,target_day,time_array,add_day,all_mins,left_day,left_hour,left_min,html = '';
       minute = dater.getUTCMinutes();
       hour = dater.getUTCHours() + 3;
       day = dater.getUTCDate();
@@ -179,13 +179,14 @@ var app = new Vue({
           }
 
           // console.log();
-          if (time_array[0] == undefined) {
-            count_bus(target_day + 1, 1);
-          } else {
-            all_mins = parseInt((time_array[0].split(":")[0] - hour) * 60) + parseInt(time_array[0].split(":")[1] - minute) + 1440 * add_day + (target_day - day - 1) * 1440;
-            left_hour = Math.floor(all_mins / 60);
-            left_min = all_mins - 60 * left_hour;
-            html += `
+               if(time_array[0] == undefined){
+                  count_bus(target_day+1, 1);
+               } else {
+                  all_mins = parseInt(( time_array[0].split(":")[0] - hour ) * 60) + parseInt(time_array[0].split(":")[1] - minute) + 1440 * add_day + (target_day - day - 1) * 1440;
+                  left_day = Math.floor(all_mins / 1440);
+                  left_hour = Math.floor((all_mins - 1440 * left_day)/60);
+                  left_min = all_mins - 1440 * left_day;
+                  html += `
                   <div>
                      <div class="left">
                         <span class="up">
@@ -197,13 +198,15 @@ var app = new Vue({
                         </span>
                      </div>
                      <div class="right">
+                        <span class="day-num">${left_day}</span>
+                        <span class="day-text">d </span>
                         <span class="hr-num">${left_hour}</span>
                         <span class="hr-text">h </span>
                         <span class="min-num">${left_min}</span>
                         <span class="min-text">m</span>
                      </div>
                   </div>`;
-          }
+               }
         }
       } else {
         html = `No bus.`;
