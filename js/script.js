@@ -214,7 +214,7 @@ var app = new Vue({
     update_timer();
     setInterval(() => {
       update_timer();
-    }, 10000);
+    }, 3000);
   } });
 
 
