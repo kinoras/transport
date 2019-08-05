@@ -144,10 +144,10 @@ footer > div .left > span.up {
 footer > div .left > span.down {
   font-size: 13px;
 }
-footer > div .right .hr-num, footer > div .right .min-num {
+footer > div .right .hr-num, footer > div .right .min-num, footer > div .right .day-num {
   font-size: 30px;
 }
-footer > div .right .hr-text, footer > div .right .min-text {
+footer > div .right .hr-text, footer > div .right .min-text, footer > div .right .day-num  {
   font-size: 20px;
 }
 
