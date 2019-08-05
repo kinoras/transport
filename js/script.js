@@ -199,19 +199,19 @@ var app = new Vue({
                      </div>
                      <div class="right">
                   `;
-                  if ( left_day !== 0 ){
+                  if ( left_day != 0 ){
                      html += `
                            <span class="day-num">${left_day}</span>
                            <span class="day-text">d </span>
                      `;
                   }
-                  if ( left_hour !== 0 ){
+                  if ( left_hour != 0 ){
                      html += `
                            <span class="hr-num">${left_hour}</span>
                            <span class="hr-text">h </span>
                      `;
                   }
-                  if ( left_min !== 0 ){
+                  if ( left_min != 0 ){
                      html += `
                            <span class="min-num">${left_min}</span>
                            <span class="min-text">m</span>
