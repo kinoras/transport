@@ -190,11 +190,11 @@ var app = new Vue({
                   <div>
                      <div class="left">
                         <span class="up">
-                           Next Bus
-                        </span>
-                        <span class="down">
                            to
                            ${Object.keys(_this.buses[target_day.toString()])[i]}
+                        </span>
+                        <span class="down">
+                           Next Bus
                         </span>
                      </div>
                      <div class="right">
