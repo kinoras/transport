@@ -270,7 +270,7 @@ main section ul.way-list li > div div {
 main section ul.way-list li > div div.arrival {
   text-align: right;
 }
-main section ul.way-list li > div div{
+main section ul.way-list li > div div.departure, main section ul.way-list li > div div.arrival{
   font-size: 27px;
   font-weight: 500;
 }
