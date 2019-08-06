@@ -91,7 +91,7 @@
             <li v-for="time in bus">
                <div>
                   <div class="departure">
-                     <span class="time">{{time}}</span>
+                     {{time}}
                      <span class="place" v-if="index">Kazan Expo</span>
                      <span class="place" v-else>WS Village</span>
                   </div>
@@ -101,7 +101,7 @@
                      40-50 seats
                   </div>
                   <div class="arrival">
-                     <span class="time">{{addTime(time,20)}}</span>
+                     {{addTime(time,20)}}
                      <span class="place" v-if="index">WS Village</span>
                      <span class="place" v-else>Kazan Expo</span>
                   </div>
