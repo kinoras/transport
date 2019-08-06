@@ -201,7 +201,7 @@ var app = new Vue({
                   `;
                   if ( left_day != 0 ){
                      html += `
-                           <span class="day-num">${left_day}</span>
+                           <span class="day-num">${left_day + 'xxx'}</span>
                            <span class="day-text">d </span>
                      `;
                   }
