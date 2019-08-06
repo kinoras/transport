@@ -326,3 +326,4 @@ $(document).ready(() => {
     $("#btn-2019-08-28-0").addClass("active");
   }
 });
+document.addEventListener('touchstart', onTouchStart, {passive: true});
