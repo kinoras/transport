@@ -12,6 +12,7 @@ self.addEventListener('install', function(e) {
        '/js/script.js',
        '/js/jquery.js',
        '/js/vue.js',
+       '/imgs/android-icon-512x512.png',
        '/imgs/android-icon-144x144.png',
        '/imgs/android-icon-192x192.png',
        '/imgs/android-icon-36x36.png',
