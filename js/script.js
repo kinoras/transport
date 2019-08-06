@@ -201,7 +201,7 @@ var app = new Vue({
                   `;
                   if ( left_day != 0 ){
                      html += `
-                           <span class="day-num">${left_day + 'xxx'}</span>
+                           <span class="day-num">${left_day}</span>
                            <span class="day-text">d </span>
                      `;
                   }
@@ -218,7 +218,6 @@ var app = new Vue({
                      `;
                   }
                   html += `
-${typeof(left_min) + 'm' + typeof(left_hour) + 'm' + typeof(left_day)}
                      </div>
                   </div>`;
                }
