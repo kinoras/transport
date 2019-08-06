@@ -255,7 +255,7 @@ main section ul.way-list li {
 main section ul.way-list li:last-child {
   border-bottom: none;
 }
-main section ul.way-list li > div {
+main section ul.way-list li {
   margin: 0 auto;
   width: 100%;
   max-width: 400px;
@@ -263,29 +263,29 @@ main section ul.way-list li > div {
   align-items: center;
   justify-content: space-between;
 }
-main section ul.way-list li > div div {
+main section ul.way-list li > div {
   flex: 2;
   flex-shrink: 0;
 }
-main section ul.way-list li > div div.arrival {
+main section ul.way-list li > div.arrival {
   text-align: right;
 }
-main section ul.way-list li > div div.departure, main section ul.way-list li > div div.arrival{
+main section ul.way-list li > div.departure, main section ul.way-list li > div.arrival{
   font-size: 27px;
   font-weight: 500;
 }
-main section ul.way-list li > div div span.place {
+main section ul.way-list li > div span.place {
   display: block;
   font-size: 13px;
   font-weight: normal;
 }
-main section ul.way-list li > div div.centre {
+main section ul.way-list li > div.centre {
   flex: 3;
   flex-shrink: 1;
   text-align: center;
   font-size: 14px;
 }
-main section ul.way-list li > div div.centre div.line {
+main section ul.way-list li > div.centre div.line {
   height: 2px;
   background: lightgrey;
   border-radius: 50px;
