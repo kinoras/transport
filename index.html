@@ -89,22 +89,20 @@
 <!--          <small class="day">{{day}}</small> -->
          <ul class="way-list" v-for="(bus, trip, index) in trip" :id="'list-2019-08-'+day+'-'+index">
             <li v-for="time in bus">
-               <div>
-                  <div class="departure">
-                     {{time}}
-                     <span class="place" v-if="index">Kazan Expo</span>
-                     <span class="place" v-else>WS Village</span>
-                  </div>
-                  <div class="centre">
-                     20 min / 18 km
-                     <div class="line"></div>
-                     40-50 seats
-                  </div>
-                  <div class="arrival">
-                     {{addTime(time,20)}}
-                     <span class="place" v-if="index">WS Village</span>
-                     <span class="place" v-else>Kazan Expo</span>
-                  </div>
+               <div class="departure">
+                  {{time}}
+                  <span class="place" v-if="index">Kazan Expo</span>
+                  <span class="place" v-else>WS Village</span>
+               </div>
+               <div class="centre">
+                  20 min / 18 km
+                  <div class="line"></div>
+                  40-50 seats
+               </div>
+               <div class="arrival">
+                  {{addTime(time,20)}}
+                  <span class="place" v-if="index">WS Village</span>
+                  <span class="place" v-else>Kazan Expo</span>
                </div>
             </li>
          </ul>
