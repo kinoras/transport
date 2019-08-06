@@ -77,7 +77,6 @@
          <a v-for="(trip, day) in buses" :id="'btn-2019-08-'+day" v-on:click="showa($event)">
             <span class="day">{{day}}</span>
             <span class="month">Aug</span>
-<!--        <span class="year">2019</span> -->
          </a>
       </nav>
       <section v-for="(trip, day) in buses" :id="'bigpage-2019-08-'+day">
@@ -86,7 +85,6 @@
                to {{trip}}
             </li>
          </ul>
-<!--          <small class="day">{{day}}</small> -->
          <ul class="way-list" v-for="(bus, trip, index) in trip" :id="'list-2019-08-'+day+'-'+index">
             <li v-for="time in bus">
                <div class="departure">
