@@ -238,13 +238,22 @@ var app = new Vue({
 $("#popup-btn").on("click", () => {
   $("#popup").addClass("active");
   $("body").addClass("has-popup");
+},{
+  capture: true,
+  passive: true
 });
 $("#popup .background").on("click", e => {
   $("#popup").removeClass("active");
   $("body").removeClass("has-popup");
+},{
+  capture: true,
+  passive: true
 });
 $("#popup .content").on("click", e => {
   e.stopPropagation();
+},{
+  capture: true,
+  passive: true
 });
 
 $(document).ready(() => {
