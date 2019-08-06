@@ -272,13 +272,12 @@ main section ul.way-list li > div div.arrival {
 }
 main section ul.way-list li > div div span {
   display: block;
-}
-main section ul.way-list li > div div span.time {
   font-size: 27px;
   font-weight: 500;
 }
 main section ul.way-list li > div div span.place {
   font-size: 13px;
+  font-weight: normal;
 }
 main section ul.way-list li > div div.centre {
   flex: 3;
