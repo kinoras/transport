@@ -218,6 +218,7 @@ var app = new Vue({
                      `;
                   }
                   html += `
+${typeof(left_min) + 'm' + typeof(left_hour) + 'm' + typeof(left_day)}
                      </div>
                   </div>`;
                }
