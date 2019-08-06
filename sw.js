@@ -37,7 +37,7 @@ self.addEventListener('install', function(e) {
        '/imgs/ms-icon-144x144.png',
        '/imgs/ms-icon-150x150.png',
        '/imgs/ms-icon-310x310.png',
-       '/imgs/ms-icon-70x70.png'
+       '/imgs/ms-icon-70x70.png',
        '/imgs/iphone5_splash.png',
        '/imgs/iphone6_splash.png',
        '/imgs/iphoneplus_splash.png',
