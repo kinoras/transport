@@ -320,7 +320,8 @@ $(document).ready(() => {
         $("#list-2019-08-28-0").addClass("active");
         $("#btn-2019-08-28-0").addClass("active");
       } else {
-        console.log(year + "-" + month + "-" + day);
+        //console.log(year + "-" + month + "-" + day);
+        if(month < 10){month = '0' + month;}
         $("#bigpage-" + year + "-" + month + "-" + day).addClass("active");
         $("#btn-" + year + "-" + month + "-" + day).addClass("active");
         $("#list-" + year + "-" + month + "-" + day + "-0").addClass("active");
