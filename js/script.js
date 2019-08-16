@@ -182,7 +182,7 @@ var app = new Vue({
 
           console.log(time_array[0]);
                if(time_array[0] == undefined){
-                  count_bus(parseInt(target_day+1), 1);
+                  count_bus(parseInt(target_day)+1, 1);
                } else {
                  
                   all_mins = parseInt(( time_array[0].split(":")[0] - hour ) * 60) + parseInt(time_array[0].split(":")[1] - minute) + 1440 * add_day + (target_day - day) * 1440;
