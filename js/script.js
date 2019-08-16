@@ -142,20 +142,20 @@ var app = new Vue({
         year++;
       }
 
-       console.log(year, month, day, hour, minute);
+//        console.log(year, month, day, hour, minute);
       if (year == 2019 && month == 8 && day < 29) {
         for (i = 0; i < Object.keys(_this.buses).length; i++) {
           if (day == Object.keys(_this.buses)[i]) {
             target_day = Object.keys(_this.buses)[i];
           }
         }
-        console.log(target_day);
+//         console.log(target_day);
         if (target_day == undefined) {
           target_day = 16;
         }
         for (i = 0; i < Object.keys(_this.buses[target_day.toString()]).length; i++) {
           count_bus(target_day, 0);
-          console.log(time_array[0], add_day, left_hour, left_min, html);
+//           console.log(time_array[0], add_day, left_hour, left_min, html);
         }
 
         function count_bus(inner_target_day, inner_type) {
@@ -175,23 +175,18 @@ var app = new Vue({
               }
             }
           } else if (inner_type == 1) {
-            let day_string = inner_target_day.toString();
-            console.log(day_string);
-//             console.log(_this.buses[]);
-//             console.log([Object.keys()[i]]);
-            console.log(_this.buses[inner_target_day.toString()]);
             time_array.push(_this.buses[inner_target_day.toString()][Object.keys(_this.buses[inner_target_day.toString()])[i]][0]);
             add_day++;
-            console.log(time_array);
+//             console.log(time_array);
           }
 
           console.log(time_array[0]);
                if(time_array[0] == undefined){
-                  count_bus(target_day+1, 1);
+                  count_bus(parseInt(target_day+1), 1);
                } else {
                  
                   all_mins = parseInt(( time_array[0].split(":")[0] - hour ) * 60) + parseInt(time_array[0].split(":")[1] - minute) + 1440 * add_day + (target_day - day) * 1440;
-                 console.log("all_mins: " + all_mins + ",time_array: " + time_array + ",hour: " + hour + ",minute: " + minute + ",add_day: " + add_day + ",target_day: " + target_day + ",day: " + day); 
+//                  console.log("all_mins: " + all_mins + ",time_array: " + time_array + ",hour: " + hour + ",minute: " + minute + ",add_day: " + add_day + ",target_day: " + target_day + ",day: " + day); 
                  left_day = Math.floor(all_mins / 1440);
                   left_hour = Math.floor((all_mins - (1440 * left_day))/60);
                   left_min = all_mins - (1440 * left_day) - (60 * left_hour);
