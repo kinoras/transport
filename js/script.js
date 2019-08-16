@@ -142,20 +142,20 @@ var app = new Vue({
         year++;
       }
 
-//       console.log(year, month, day, hour, minute);
+       console.log(year, month, day, hour, minute);
       if (year == 2019 && month == 8 && day < 29) {
         for (i = 0; i < Object.keys(_this.buses).length; i++) {
           if (day == Object.keys(_this.buses)[i]) {
             target_day = Object.keys(_this.buses)[i];
           }
         }
-        //console.log(target_day);
+        console.log(target_day);
         if (target_day == undefined) {
           target_day = 16;
         }
         for (i = 0; i < Object.keys(_this.buses[target_day.toString()]).length; i++) {
           count_bus(target_day, 0);
-          //console.log(time_array[0], add_day, left_hour, left_min, html);
+          console.log(time_array[0], add_day, left_hour, left_min, html);
         }
 
         function count_bus(inner_target_day, inner_type) {
@@ -185,7 +185,7 @@ var app = new Vue({
                } else {
                  
                   all_mins = parseInt(( time_array[0].split(":")[0] - hour ) * 60) + parseInt(time_array[0].split(":")[1] - minute) + 1440 * add_day + (target_day - day) * 1440;
-                 //console.log("all_mins: " + all_mins + ",time_array: " + time_array + ",hour: " + hour + ",minute: " + minute + ",add_day: " + add_day + ",target_day: " + target_day + ",day: " + day); 
+                 console.log("all_mins: " + all_mins + ",time_array: " + time_array + ",hour: " + hour + ",minute: " + minute + ",add_day: " + add_day + ",target_day: " + target_day + ",day: " + day); 
                  left_day = Math.floor(all_mins / 1440);
                   left_hour = Math.floor((all_mins - (1440 * left_day))/60);
                   left_min = all_mins - (1440 * left_day) - (60 * left_hour);
