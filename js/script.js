@@ -180,7 +180,7 @@ var app = new Vue({
 //             console.log(time_array);
           }
 
-          console.log(time_array[0]);
+          console.log(add_day);
                if(time_array[0] == undefined){
                   count_bus(parseInt(target_day)+1, 1);
                } else {
