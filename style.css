@@ -142,7 +142,7 @@ footer > div .left > span.up {
 }
 footer > div .left > span.down {
   font-size: 13px;
-  text-transform: uppercase;
+/*   text-transform: uppercase; */
 }
 footer > div .right .hr-num, footer > div .right .min-num, footer > div .right .day-num {
   font-size: 30px;
