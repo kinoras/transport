@@ -185,7 +185,7 @@ var app = new Vue({
                } else {
                  
                   all_mins = parseInt(( time_array[0].split(":")[0] - hour ) * 60) + parseInt(time_array[0].split(":")[1] - minute) + 1440 * add_day + (target_day - day - 1) * 1440;
-                 console.log(all_mins); 
+                 console.log("all_mins: " + all_mins + ",time_array: " + time_array + ",hour: " + hour + ",minute: " + minute + ",add_day: " + add_day + ",target_day: " + target_day + ",day: " + day); 
                  left_day = Math.floor(all_mins / 1440);
                   left_hour = Math.floor((all_mins - (1440 * left_day))/60);
                   left_min = all_mins - (1440 * left_day) - (60 * left_hour);
