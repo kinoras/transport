@@ -147,9 +147,10 @@ var app = new Vue({
         for (i = 0; i < Object.keys(_this.buses).length; i++) {
           if (day == Object.keys(_this.buses)[i]) {
             target_day = Object.keys(_this.buses)[i];
-            console.log(target_day);
+            
           }
         }
+        console.log(target_day);
         if (target_day == undefined) {
           target_day = 16;
         }
