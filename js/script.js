@@ -177,6 +177,7 @@ var app = new Vue({
           } else if (inner_type == 1) {
             time_array.push(_this.buses[inner_target_day.toString()][Object.keys(_this.buses[inner_target_day.toString()])[i]][0]);
             add_day++;
+            console.log(time_array);
           }
 
           console.log(time_array[0]);
