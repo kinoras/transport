@@ -147,7 +147,6 @@ var app = new Vue({
         for (i = 0; i < Object.keys(_this.buses).length; i++) {
           if (day == Object.keys(_this.buses)[i]) {
             target_day = Object.keys(_this.buses)[i];
-            
           }
         }
         console.log(target_day);
@@ -156,7 +155,7 @@ var app = new Vue({
         }
         for (i = 0; i < Object.keys(_this.buses[target_day.toString()]).length; i++) {
           count_bus(target_day, 0);
-//           console.log(time_array[0], left_hour, left_min, html);
+          console.log(time_array[0], left_hour, left_min, html);
         }
 
         function count_bus(inner_target_day, inner_type) {
