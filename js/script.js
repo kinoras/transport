@@ -175,7 +175,9 @@ var app = new Vue({
               }
             }
           } else if (inner_type == 1) {
-            console.log(_this.buses[inner_target_day.toString()]);
+            let day_string = inner_target_day.toString();
+            console.log(day_string);
+//             console.log(_this.buses[]);
 //             console.log([Object.keys()[i]]);
             console.log(_this.buses[inner_target_day.toString()]);
             time_array.push(_this.buses[inner_target_day.toString()][Object.keys(_this.buses[inner_target_day.toString()])[i]][0]);
