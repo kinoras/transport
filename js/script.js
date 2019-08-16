@@ -180,7 +180,7 @@ var app = new Vue({
 //             console.log(time_array);
           }
 
-          console.log(add_day);
+//           console.log(add_day);
                if(time_array[0] == undefined){
                   count_bus(parseInt(target_day)+1, 1);
                } else {
@@ -199,6 +199,11 @@ var app = new Vue({
                         </span>
                         <span class="down">
                            Next bus departs at ${time_array[0]}
+                  `;
+                  if(add_day){
+                     html += `tomorrow`;
+                  }
+                  html += `
                         </span>
                      </div>
                      <div class="right">
