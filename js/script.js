@@ -197,7 +197,7 @@ var app = new Vue({
                            ${Object.keys(_this.buses[target_day.toString()])[i]}
                         </span>
                         <span class="down">
-                           Next Bus
+                           Next bus departs at ${time_array[0]}
                         </span>
                      </div>
                      <div class="right">
