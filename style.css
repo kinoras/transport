@@ -139,6 +139,7 @@ footer > div .left > span {
 footer > div .left > span.up {
   font-size: 20px;
   font-weight: 500;
+  margin-bottom: 1px;
 }
 footer > div .left > span.down {
   font-size: 13px;
